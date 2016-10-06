@@ -1,0 +1,61 @@
+header.row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(rgba(0,102,0,1.00) 0%, rgba(0,204,0,1.0) 100%);
+  background: url("fern.png"), url("stripe.png");
+  background-size: auto 80%, auto auto, auto auto;
+  background-color: #009900;
+  background-repeat: no-repeat, repeat;
+  background-position: 43% 56%;
+}
+header.row h2 {
+  font-family: Impact;
+  color: #00FF00;
+  text-align: center;
+  font-size: 3.5em;
+  text-shadow: 0px 5px 5px rgba(0,0,0,.4);
+
+}
+.logowhite {
+  font-family: Lucia Grande;
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: .5em;
+  text-shadow: 0px 3px 5px black;
+  text-transform: uppercase;
+}
+#content{
+  margin-top: 50px;
+  height: 100px;
+  text-align: center;
+  width: 150px;
+  border: 1px solid black;
+  background-color: #32CD32;
+}
+#main{
+  border: 1px solid black;
+  height: 200px; width: 325px;
+  text-align: center;
+  background-color: #32CD32;
+}
+#footer{
+  text-align: center;
+  float: center;
+  margin-bottom: 125px;
+  height: 125px;
+  width: 250px;  
+  background-color: black;
+}
+.left{
+  float: left;
+  margin-left: 20px;
+}
+.right{
+  float: right;
+  margin-right: 20px;
+}
+.center{
+  margin-left: 175px;
+  margin-top: 100px;
+}

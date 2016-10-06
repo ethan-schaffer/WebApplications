@@ -1,0 +1,26 @@
+h1:nth-child(1){
+	color: red;
+
+}
+h1:nth-child(3){
+	color: violet;
+}
+h1{
+	background-color: aquamarine; /* works */
+	border: 3px solid green; /* works */
+	text-indent: 10px;
+	font-family: "Tahoma";
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-style: italic;
+}
+p{
+	font-family: "Tahoma";
+	color: khaki;
+}
+span#makeRed{
+	color: red;
+	font-style: italic;
+	word-spacing: 10.5px;
+}
+body{ background-image: url("Grey_Background.jpg"); }

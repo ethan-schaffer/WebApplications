@@ -1,0 +1,19 @@
+body {
+    color: Black;
+    font-size: 18pt;
+}
+div{
+    background: purple;
+}
+h1 {
+    font-size: 50pt;
+    color: black;
+    margin-left: 20px;
+}
+h4{
+    margin-left: 20px;
+    color: red;
+}
+h2 { 
+    font-size: 24pt;    
+}

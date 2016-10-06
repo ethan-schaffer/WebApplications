@@ -1,0 +1,86 @@
+
+body, html {
+    background-color: #f6f6f6;
+}
+
+#painting{
+	height: 400px;
+	width: 400px;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #fff4db;
+	box-shadow: 10px 10px 0px #8d8d8d;
+}
+#tr{
+	height: 300px;
+	background-color: black;
+}
+#tr-tr{
+	height: 290px;
+	width: 290px;
+}
+#tr-tl{
+	height: 140px;
+	width: 100px;
+}
+#tr-mbound{
+	height: 10px;
+	width: 100px;
+}
+#tr-ml{
+	height: 140px;
+	width: 100px;
+}
+#br{
+	height: 100px;
+	background-color: black;
+}
+#br-bl{
+	height: 100px;
+	width: 100px;
+}
+#br-border{
+	height: 100px;
+	width: 10px;
+}
+#br-bigbr{
+	height: 100px;
+	width: 260px;
+}
+#right-tb{
+	height: 45px;
+	width: 20px;
+}
+#right-m{
+	height: 10px;
+	width: 20px;
+}
+
+/*color classes. These are the CSS classes that will color in the blocks*/
+
+.red {
+    background-color: #cc3333;   
+}
+
+.blue {
+    background-color: #2f7fd8;   
+}
+
+.yellow {
+    background-color: #feda09;   
+}
+
+.black {
+    background-color: #393939;   
+}
+.bkg{
+	background-color: #fff4db;
+}
+
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}

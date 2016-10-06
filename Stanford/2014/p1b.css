@@ -1,0 +1,23 @@
+table{
+	font-family: "Tahoma";
+	font-size: 13px;
+	border: 10px solid #d0d0ff;
+	padding: 20px 20px 20px 20px;
+}
+th{
+	text-align: left;
+}
+td, th{
+	padding-right: 10px;
+}
+#b{
+    border-bottom: 2px solid black;
+}
+#off{
+    font-weight: bold;
+}
+td:nth-child(n+4){
+	text-align: center;
+	padding-right: 10px;
+
+}
