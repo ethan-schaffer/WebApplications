@@ -1,19 +1,35 @@
 import webapp2
 import cgi
+import re
 
 form = """
-<p> Please Enter your info </p>
-<form method="post" action="/">
+<head>
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
 
-<label> username   <input type="text" name="username"   value="%(username)s"> </label> <div style="color: red">%(error_u)s</div>
-<label> <br> password  <input type="text" name="password"  value="%(password)s"> </label> <div style="color: red">%(error_p)s</div>
+<body>
+<h1> Please Enter your Info </h1>
+<form method="post" action="/">
+<div id="b">
+<label> username <input type="text" name="username"   value="%(username)s"> 
+<label> <br> password  <input type="text" name="password"  value="%(password)s">
 <label> <br> comfirm password  <input type="text" name="password2" </label>
-<label> <br> email (optional) <input type="text" name="email" value="%(email)s"> </label> <div style="color: red">%(error_e)s</div>
+<label> <br> email (optional) <input type="text" name="email" value="%(email)s"> 
+</div>
+</label> <div style="color: red">%(error_u)s</div>
+</label> <div style="color: red">%(error_p)s</div>
+</label> <div style="color: red">%(error_e)s</div>
 
 <input type="submit">
 </form>
+</body>
 """
-
+PASS_RE = re.compile(r"[\S]{3,20}")
+USER_RE = re.compile(r"[a-z|A-z|1-9|\_\-]{3,20}")
+EMAIL_RE = re.compile(r"[a-z|A-z]{3,20}\@[a-z|A-z]{3,20}\.[a-z|A-z]{1,3}")
+global user
+def valid_email(email):
+  return EMAIL_RE.match(email)
 def escape_html(s):
     return cgi.escape(s, quote = True)
 
@@ -22,13 +38,17 @@ def write_form(self, email="", username="", password="", error_u="", error_e="",
     "error_e": error_e, "error_p": error_p, "error_u": error_u})
 
 def is_username_good(username):
+  if(USER_RE.match(username)):
+    return True
   return False
 
 def is_email_good(email):
+  if(valid_email(email)):
+    return True
   return False
 
 def is_password_good(password, password2):
-  if(password == password2):
+  if(password == password2 and PASS_RE.match(password)):
     return True
   return False
 
@@ -36,10 +56,11 @@ class MainPage(webapp2.RequestHandler):
 
   def get(self):
     self.response.headers['Content-Type'] = 'text/html'
-    self.response.write("<h1>Welcome!</h1>")
+    #self.response.write("<h1>Welcome!</h1>")
     write_form(self)
 
   def post(self):
+      global user
       user = self.request.get("username")
       em = self.request.get("email")
       pw = self.request.get("password")
@@ -56,8 +77,16 @@ class MainPage(webapp2.RequestHandler):
 
 class Success(webapp2.RequestHandler):
   def get(self):
-    self.response.write("<h`>Good Work!</h1>")
-
+    global user
+    goodwork = """
+    <h3>Well done, %(user)s</h3>
+    """
+    imageRecall = """
+    <img src="images/success.png">
+    """
+    self.response.write("<h1>Good Work!</h1>")
+    self.response.write(goodwork % {"user": user})
+    self.response.write(imageRecall)
 
 application = webapp2.WSGIApplication([
  ('/', MainPage),
