@@ -9,24 +9,40 @@ form = """
 
 <body>
 <h1> Please Enter your Info </h1>
-<form method="post" action="/">
-<div id="b">
-<label> username <input type="text" name="username"   value="%(username)s"> 
-<label> <br> password  <input type="text" name="password"  value="%(password)s">
-<label> <br> comfirm password  <input type="text" name="password2" </label>
-<label> <br> email (optional) <input type="text" name="email" value="%(email)s"> 
-</div>
-</label> <div style="color: red">%(error_u)s</div>
-</label> <div style="color: red">%(error_p)s</div>
-</label> <div style="color: red">%(error_e)s</div>
+  <form method="post" action="/">
+    <div id="b">
+      <table>
+        <tr>
+          <td>Username</td>
+          <td><input type="text" name="username" value=%(username)s></td>
+          <td><div style="color: red">%(error_u)s</div></td>
+        </tr>
+        <tr>
+          <td>Password</td>
+          <td><input type="password" name="password" value=%(password)s></td>
+          <td><div style="color: red">%(error_p)s</div></td>
+        </tr>
+        <tr>
+          <td>Confirm Password</td>
+          <td><input type="password" name="password2" value=""></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td><input type="text" name="email" value=%(email)s></td>
+          <td><div style="color: red">%(error_e)s</div></td>
+        </tr>
+      </table>
 
-<input type="submit">
-</form>
+    </div>
+    <input type="submit">
+  </form>
 </body>
 """
-PASS_RE = re.compile(r"[\S]{3,20}")
-USER_RE = re.compile(r"[a-z|A-z|1-9|\_\-]{3,20}")
-EMAIL_RE = re.compile(r"[a-z|A-z]{3,20}\@[a-z|A-z]{3,20}\.[a-z|A-z]{1,3}")
+PASS_RE = re.compile(r"[\S]{3,20}$")
+USER_RE = re.compile(r"[a-zA-Z0-9_-]{3,20}$")
+EMAIL_RE = re.compile(r"[a-z|A-z]{3,20}\@[a-z|A-z]{3,20}\.[a-z|A-z]{3}$")
+
 global user
 def valid_email(email):
   return EMAIL_RE.match(email)
