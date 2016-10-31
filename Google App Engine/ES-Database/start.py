@@ -3,6 +3,7 @@ import logging
 import re
 import jinja2
 import os
+import time
 from google.appengine.ext import db
 
 ## see http://jinja.pocoo.org/docs/api/#autoescaping
@@ -43,19 +44,28 @@ class MainPage(MyHandler):
 
     def post(self):
         artInst = Art()
-        artInst.title = self.request.get("text")
-        artInst.body = self.request.get("art")
-        if(not artInst.body) and (not artInst.title):
-            artInst.put()
-            message = "Fill in both Boxes"
-        else:
+        artInst.title = self.request.get("artname")
+        artInst.body = self.request.get("piece")
+        if (artInst.title) and (artInst.body):
             message = "Thanks!"
+            artInst.put()
+            time.sleep(.2)
+        else:
+            message = "Fill in both Boxes"
         pictures = db.GqlQuery("SELECT * FROM Art ORDER BY created DESC")
         dictionary = {"arts": pictures, 
                     "message": message}
         template = JINJA_ENVIRONMENT.get_template('/templates/index.html')
         self.response.write(template.render(dictionary))
+class Favorite(webapp2.RequestHandler):
+    def get(self):
+        idValue = 5543806346723328
+        artInst = Art.get_by_id(idValue)
+        dictionary = {"Title": artInst.title, "Body": artInst.body}
+        template = JINJA_ENVIRONMENT.get_template('/templates/favorite.html')
+        self.response.write(template.render(dictionary))
 
 application = webapp2.WSGIApplication([
-    ('/', MainPage)
+    ('/', MainPage),
+    ('/Favorite', Favorite)
 ], debug=True)

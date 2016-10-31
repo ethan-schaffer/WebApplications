@@ -10,11 +10,11 @@
     <form method="post">
       <label>
         <div>title</div>
-        <input type="text" name="title">
+        <input type="text" name="artname">
       </label>
       <label>
         <div>art</div>
-        <textarea name="art"></textarea>
+        <textarea name="piece"></textarea>
       </label>
       <br>
       <input type="submit">
@@ -23,8 +23,8 @@
     <!-- Python code embedded in HTML for Jinja2 -->
     {% for art in arts %}
    <div class="art">
-   <div class="art-title">{{art.title}}</div>
-   <pre class="art-body">{{art.art}}</pre>  
+     <div class="art-title">{{art.title}}</div>
+     <pre class="art-body">{{art.body}}</pre>  
    </div>
     {% endfor %}
   </body>
