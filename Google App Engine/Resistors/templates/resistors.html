@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Resistors </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <form method="post" action="/resistors">
+    <img src="../images/resistor-color-chart.jpg"></img>
+    <br>
+    <td>
+        <tr>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</tr>
+        {%if show_image %}
+      <tr>
+        <select name="s1">
+        {%if s1_val == "black" %}            
+            <option value="black" selected>black</option>
+        {%else %}            
+            <option value="black">black</option>
+        {%endif %}        
+        {%if s1_val == "brown" %}            
+            <option value="brown" selected>brown</option>
+        {%else %}            
+            <option value="brown">brown</option>
+        {%endif %}            
+
+        {%if s1_val == "red" %}            
+            <option value="red" selected>red</option>
+        {%else %}            
+            <option value="red">red</option>
+        {%endif %}            
+        {%if s1_val == "orange" %}            
+            <option value="orange" selected>orange</option>
+        {%else %}            
+            <option value="orange">orange</option>
+        {%endif %}            
+
+        {%if s1_val == "yellow" %}            
+            <option value="yellow" selected>yellow</option>
+        {%else %}            
+            <option value="yellow">yellow</option>
+        {%endif %}            
+        {%if s1_val == "green" %}            
+            <option value="green" selected>green</option>
+        {%else %}            
+            <option value="green">green</option>
+        {%endif %}            
+        {%if s1_val == "blue" %}            
+            <option value="blue" selected>blue</option>
+        {%else %}            
+            <option value="blue">blue</option>
+        {%endif %}            
+        {%if s1_val == "violet" %}            
+            <option value="violet" selected>violet</option>
+        {%else %}            
+            <option value="violet">violet</option>
+        {%endif %}            
+        {%if s1_val == "grey" %}            
+            <option value="grey" selected>grey</option>
+        {%else %}            
+            <option value="grey">grey</option>
+        {%endif %}            
+        {%if s1_val == "white" %}            
+            <option value="white" selected>white</option>
+        {%else %}            
+            <option value="white">white</option>
+        {%endif %}            
+        </select>
+      </tr>
+
+      <tr>
+        <select name="s2">
+        {%if s2_val == "black" %}            
+            <option value="black" selected>black</option>
+        {%else %}            
+            <option value="black">black</option>
+        {%endif %}        
+        {%if s2_val == "brown" %}            
+            <option value="brown" selected>brown</option>
+        {%else %}            
+            <option value="brown">brown</option>
+        {%endif %}            
+
+        {%if s2_val == "red" %}            
+            <option value="red" selected>red</option>
+        {%else %}            
+            <option value="red">red</option>
+        {%endif %}            
+        {%if s2_val == "orange" %}            
+            <option value="orange" selected>orange</option>
+        {%else %}            
+            <option value="orange">orange</option>
+        {%endif %}            
+
+        {%if s2_val == "yellow" %}            
+            <option value="yellow" selected>yellow</option>
+        {%else %}            
+            <option value="yellow">yellow</option>
+        {%endif %}            
+        {%if s2_val == "green" %}            
+            <option value="green" selected>green</option>
+        {%else %}            
+            <option value="green">green</option>
+        {%endif %}            
+        {%if s2_val == "blue" %}            
+            <option value="blue" selected>blue</option>
+        {%else %}            
+            <option value="blue">blue</option>
+        {%endif %}            
+        {%if s2_val == "violet" %}            
+            <option value="violet" selected>violet</option>
+        {%else %}            
+            <option value="violet">violet</option>
+        {%endif %}            
+        {%if s2_val == "grey" %}            
+            <option value="grey" selected>grey</option>
+        {%else %}            
+            <option value="grey">grey</option>
+        {%endif %}            
+        {%if s2_val == "white" %}            
+            <option value="white" selected>white</option>
+        {%else %}            
+            <option value="white">white</option>
+        {%endif %}            
+        </select>
+      </tr>
+
+      <tr>
+        <select name="s3">
+        {%if s3_val == "black" %}            
+            <option value="black" selected>black</option>
+        {%else %}            
+            <option value="black">black</option>
+        {%endif %}        
+        {%if s3_val == "brown" %}            
+            <option value="brown" selected>brown</option>
+        {%else %}            
+            <option value="brown">brown</option>
+        {%endif %}            
+
+        {%if s3_val == "red" %}            
+            <option value="red" selected>red</option>
+        {%else %}            
+            <option value="red">red</option>
+        {%endif %}            
+        {%if s3_val == "orange" %}            
+            <option value="orange" selected>orange</option>
+        {%else %}            
+            <option value="orange">orange</option>
+        {%endif %}            
+
+        {%if s3_val == "yellow" %}            
+            <option value="yellow" selected>yellow</option>
+        {%else %}            
+            <option value="yellow">yellow</option>
+        {%endif %}            
+        {%if s3_val == "green" %}            
+            <option value="green" selected>green</option>
+        {%else %}            
+            <option value="green">green</option>
+        {%endif %}            
+        {%if s3_val == "blue" %}            
+            <option value="blue" selected>blue</option>
+        {%else %}            
+            <option value="blue">blue</option>
+        {%endif %}            
+        {%if s3_val == "violet" %}            
+            <option value="violet" selected>violet</option>
+        {%else %}            
+            <option value="violet">violet</option>
+        {%endif %}            
+        {%if s3_val == "grey" %}            
+            <option value="grey" selected>grey</option>
+        {%else %}            
+            <option value="grey">grey</option>
+        {%endif %}            
+        {%if s3_val == "white" %}            
+            <option value="white" selected>white</option>
+        {%else %}            
+            <option value="white">white</option>
+        {%endif %}            
+        </select>
+      </tr>
+
+      <tr>
+        <select name="s4">
+        {%if s4_val == "black" %}            
+            <option value="black" selected>black</option>
+        {%else %}            
+            <option value="black">black</option>
+        {%endif %}        
+        {%if s4_val == "brown" %}            
+            <option value="brown" selected>brown</option>
+        {%else %}            
+            <option value="brown">brown</option>
+        {%endif %}            
+
+        {%if s4_val == "red" %}            
+            <option value="red" selected>red</option>
+        {%else %}            
+            <option value="red">red</option>
+        {%endif %}            
+        {%if s4_val == "orange" %}            
+            <option value="orange" selected>orange</option>
+        {%else %}            
+            <option value="orange">orange</option>
+        {%endif %}            
+
+        {%if s4_val == "yellow" %}            
+            <option value="yellow" selected>yellow</option>
+        {%else %}            
+            <option value="yellow">yellow</option>
+        {%endif %}            
+        {%if s4_val == "green" %}            
+            <option value="green" selected>green</option>
+        {%else %}            
+            <option value="green">green</option>
+        {%endif %}            
+        {%if s4_val == "blue" %}            
+            <option value="blue" selected>blue</option>
+        {%else %}            
+            <option value="blue">blue</option>
+        {%endif %}            
+        {%if s4_val == "violet" %}            
+            <option value="violet" selected>violet</option>
+        {%else %}            
+            <option value="violet">violet</option>
+        {%endif %}            
+        </select>
+      </tr>
+
+        {% else %}
+      <tr>
+        <select name="s1">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yelow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="violet">violet</option>
+            <option value="grey">grey</option>
+            <option value="white">white</option>
+        </select>
+      </tr>
+      <tr>
+        <select name="s2">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yelow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="violet">violet</option>
+            <option value="grey">grey</option>
+            <option value="white">white</option>
+        </select>
+      </tr>
+      <tr>
+        <select name="s3">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yelow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="violet">violet</option>
+            <option value="grey">grey</option>
+            <option value="white">white</option>
+        </select>
+      </tr>
+      <tr>
+        <select name="s4">
+            <option value="black">black</option>
+            <option value="brown">brown</option>
+            <option value="red">red</option>
+            <option value="orange">orange</option>
+            <option value="yellow">yelow</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+            <option value="violet">violet</option>
+        </select>
+      </tr>
+              {% endif%}
+
+      <input class="center" type="submit">
+        {%if show_image %}
+            <table>
+                <tr>
+                    <td class="white box"></td>
+                    <td class="{{s1_val}} box"></td>
+                    <td class="{{s2_val}} box"></td>
+                    <td class="{{s3_val}} box"></td>
+                    <td class="{{s4_val}} box"></td>
+                </tr>
+            </table>
+            <p class="bigtext"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{resistance_value}}<img src="../images/ohm.PNG" width="65" height="65"></img></p>
+            <p>How many resistors?</p>
+            <input type="text" class="center" name="amount" value="">
+            <input type="submit">
+            <a href="/resistors/database">Go to Database</a>
+        {%endif %}
+
+  </body>
+</html>

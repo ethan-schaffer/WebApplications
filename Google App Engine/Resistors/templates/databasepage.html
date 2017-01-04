@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Database </title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="center">
+
+      <table align="center" class="table">
+        <div class="titleflag">
+          <tr class="tr">
+            <th class="th">Ohms</th>
+            <th class="th">QTY</th> 
+            <th class="th">Colors</th>
+            <th class="th">Name</th>
+          </tr>
+        </div>
+        {% for resistor in values %}
+          <tr class="tr">
+            <td class="td">{{resistor.ohm_value_as_string}}</td>
+            <td class="td">{{resistor.amount_of_resistors}}</td> 
+            <td class="td">{{resistor.colors}}</td>
+            <td class="td">{{resistor.added_by}}</td>
+          </tr>
+        {% endfor %}
+      </table> 
+  </div>
+
+  </body>
+</html>

@@ -67,7 +67,7 @@ class WriteABlogPost(MyHandler):
             self.redirect('/blog/%s'%str(temp.key().id()))
         else:
             error = True
-            self.redirect('/blog/newpost')
+            self.redirect('/blog/register')
 
 class ReDir(MyHandler):
     def get(self):
@@ -82,6 +82,7 @@ class SinglePost(MyHandler):
         self.render('post.html', **dictionary)
 
     def post(self, blogid):
+        logging.info("*************** SinglePost.get ****************")
         post = BlogPost.get_by_id(int(blogid))
         dictionary = {"post": post, 
                     "Title": "Ethan's new blog"}

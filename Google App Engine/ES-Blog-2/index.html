@@ -1,0 +1,35 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+
+<body>
+	<h1> Please Enter your Info </h1>
+	<form method="post" action="/blog/register">
+		<div id="b">
+			<table>
+				<tr>
+					<td>Username</td>
+					<td><input type="text" name="username" value={{user}}></td>
+					<td><div style="color: red">{{userRW}}</div></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" name="password" value={{pass}}></td>
+					<td><div style="color: red">{{passRW}}</div></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td><input type="password" name="password2" value={{pass}}></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" value={{email}}></td>
+					<td><div style="color: red">{{emailRW}}</div></td>
+				</tr>
+			</table>
+
+		</div>
+		<input type="submit">
+	</form>
+</body>

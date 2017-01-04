@@ -1,0 +1,79 @@
+.firstline {
+ font-size: 48px;
+ color:#99FF66;
+}
+.goodluck{
+	font-size: 36px;
+	color:blue;
+}
+.entername{
+	font-size: 24px;
+	color:#808080;
+}
+.box{	
+	height: 25px;
+	width: 60px;
+}
+.red{ 
+	background-color:#ff0000;
+}
+.black{ 
+	background-color:#000000;
+}
+.brown{ 
+	background-color:#a52a2a;
+}
+.orange{ 
+	background-color:#ffa500;
+}
+.yellow{ 
+	background-color:#ffff00;
+}
+.green{ 
+	background-color:#008000;
+}
+.blue{ background-color:#0000ff;
+}
+.violet{ background-color:#800080;
+}
+.grey{ background-color:#808080;}
+.white{ background-color:#ffffff;}
+.silver{ background-color:#c0c0c0;}
+.gold{ background-color:#d4a017;}
+
+.center{
+	text-align: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.error{
+	color:red;
+}
+.bigtext{
+	font-size: 72px;
+	font-color: black;
+}
+.titleflag{
+	background-color: red;
+}
+.table {
+ border-collapse: collapse;
+ border: 5px solid blue;
+}
+.tr { 
+ border: solid;
+ border-width: 2px 2px;
+ border-color: blue;
+}
+.td { 
+ border: solid;
+ border-width: 2px 2px;
+ border-color: blue;
+}
+.th { 
+ border: solid;
+ background-color: gray;
+ border-width: 2px 2px;
+ border-color: blue;
+}
